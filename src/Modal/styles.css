@@ -1,0 +1,135 @@
+#Cover {
+  flex: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 2s;
+  background-color: #ec6c6c42;
+  width: 100%;
+}
+
+#Modal {
+  height: 300px;
+  width: 300px;
+  background-color: #fff;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 2s;
+  border: 1px solid #C6C6C6;
+}
+
+.in {
+  -webkit-animation-name: slide-in-elliptic-top-fwd;
+  -webkit-animation-animation-fill-mode: forwards;
+  -webkit-animation-animation-direction: normal;
+  -webkit-animation-animation-duration: 0.7s;
+  -webkit-animation-animation-timing-function: cubic-bezier(
+    0.25,
+    0.46,
+    0.45,
+    0.94
+  );
+
+  animation-name: slide-in-elliptic-top-fwd;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.out {
+  -webkit-animation-name: slide-in-elliptic-top-fwd;
+  -webkit-animation-animation-fill-mode: forwards;
+  -webkit-animation-animation-direction: reverse;
+  -webkit-animation-animation-duration: 0.7s;
+  -webkit-animation-animation-timing-function: cubic-bezier(
+    0.25,
+    0.46,
+    0.45,
+    0.94
+  );
+
+  animation-name: slide-in-elliptic-top-fwd;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.op-in {
+  -webkit-animation-name: transition-opacity;
+  -webkit-animation-animation-fill-mode: forwards;
+  -webkit-animation-animation-direction: normal;
+  -webkit-animation-animation-duration: 0.7s;
+
+  animation-name: transition-opacity;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-duration: 0.7s;
+}
+
+.op-out {
+  -webkit-animation-name: transition-opacity;
+  -webkit-animation-animation-fill-mode: forwards;
+  -webkit-animation-animation-direction: reverse;
+  -webkit-animation-animation-duration: 0.7s;
+
+  animation-name: transition-opacity;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  animation-duration: 0.7s;
+}
+
+@-webkit-keyframes slide-in-elliptic-top-fwd {
+  0% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+    transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+    transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+    transform-origin: 50% 1400px;
+    opacity: 1;
+  }
+}
+@keyframes slide-in-elliptic-top-fwd {
+  0% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+    transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+    transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+    transform-origin: 50% 1400px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes transition-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes transition-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
